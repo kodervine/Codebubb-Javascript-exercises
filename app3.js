@@ -1,102 +1,204 @@
-// Array of people
-const people = [
-  { firstName: 'Sam', lastName: 'Hughes', DOB: '07/07/1978', department: 'Development', salary: '45000' },
-  { firstName: 'Terri', lastName: 'Bishop', DOB: '02/04/1989', department: 'Development', salary: '35000' },
-  { firstName: 'Jar', lastName: 'Burke', DOB: '11/01/1985', department: 'Marketing', salary: '38000' },
-  { firstName: 'Julio', lastName: 'Miller', DOB: '12/07/1991', department: 'Sales', salary: '40000' },
-  { firstName: 'Chester', lastName: 'Flores', DOB: '03/15/1988', department: 'Development', salary: '41000' },
-  { firstName: 'Madison', lastName: 'Marshall', DOB: '09/22/1980', department: 'Sales', salary: '32000' },
-  { firstName: 'Ava', lastName: 'Pena', DOB: '11/02/1986', department: 'Development', salary: '38000' },
-  { firstName: 'Gabriella', lastName: 'Steward', DOB: '08/26/1994', department: 'Marketing', salary: '46000' },
-  { firstName: 'Charles', lastName: 'Campbell', DOB: '09/04/1977', department: 'Sales', salary: '42000' },
-  { firstName: 'Tiffany', lastName: 'Lambert', DOB: '05/11/1990', department: 'Development', salary: '34000' },
-  { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '03/24/1985', department: 'Office Management', salary: '49000' },
-  { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' },
-];
+// Trying some of these - https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php
+// Javascript exercise 1
+// Write a JavaScript program to display the current day and time in the following format.  Go to the editor ====== Sample Output: Today is: Tuesday.==== Current time is: 10 PM: 30 : 38
+function getTheDate() {
+  const todayDate = new Date();
+  const day = todayDate.getDay();
+  const hours = todayDate.getHours();
+  const minute = todayDate.getMinutes();
+  const second = todayDate.getSeconds();
 
-
-/*
-=====================
-Exercises 1
-
-1) What is the average income of all the people in the array?
-=====================
-Pseudo code 
-== Use the for-in
-== Initialize a variable
-== Add each iteration to the initialized variable
-
-*/
-// My solution
-let count = 0;
-for (person in people) {
-  console.log(person)
-  count += parseInt(`${person}`);
-  console.log(count)
+  console.log(`Today is: ${day}. Current time is: ${hours}AM:${minute}:${second}`)
 }
 
-// His solution
-people.reduce((accumulator, person) => accumulator + parseInt(person.salary), 0) / people.length
+getTheDate()
 
-// 2) Who are the people that are currently older than 30?
-people.filter(person => new Date().getFullYear() - new Date(person.DOB).getFullYear() >= 30)
+// Javascript exercise 2
+// Write a JavaScript program to print the contents of the current window.  
+const printContent = function () {
+  return document.body.innerText;
+}
+console.log(printContent())
+
+// Previous solution
+// const printContent = document.body.innerText;
+// console.log(printContent)
+
+// Exercise 3
+// Write a JavaScript program to get the current date.  Go to the editor : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+
+function getTheCurrentDate() {
+  const todayDate = new Date();
+  const thisDay = todayDate.getDay();
+  const thisMonth = todayDate.getMonth();
+  const thisYear = todayDate.getFullYear();
+
+  console.log(`${thisDay}-${thisMonth}-${thisYear}`)
+}
+
+getTheCurrentDate()
+
+// Exercise 4
+// Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7
+
+function findArea(x, y, z) {
+  return x * y * z
+}
+
+console.log(findArea(5, 6, 7))
+
+// Exercise 5
+// Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front
+
+function rotateString(str) {
+  // const strSplit = str.split('')
+  // let newStr = strSplit;
+  // for (let i = 0; i < strSplit.length; i++) {
+  //   newStr = strSplit.pop();
+  //   newStr = strSplit.push();
+  // }
+  return str.split('')
+}
+
+console.log(rotateString('w3resource'))
+
+// Exercise 6
+// Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar
+
+function getLeapYear(num) {
+
+  if (num === 1600 || num === 2000) {
+    console.log(`${num} is a leap year`)
+  } else if ((num % 4 === 0) && ((num % 100 === 0) && (num % 100 === 0))) {
+    console.log(`${num} is not a leap year`)
+  } else if ((num % 4 === 0)) {
+    console.log(`${num} is a leap yeat`)
+  } else {
+    console.log(`This ${num} is not even divisible by 4`)
+  }
+}
+
+console.log(getLeapYear(1800))
+
+// Exercise 7
+//  Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
+
+// ====================================
+
+// Exercise 8
+// Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched"
+
+function geneRandNum() {
+  const callNum = prompt('Guess a Number')
+  if (callNum > 0 && callNum < 10) {
+    alert('Good work')
+  } else {
+    alert(
+      ('Not matched')
+    )
+    prompt('Guess another number')
+  }
+}
+
+// geneRandNum()
+
+// Exercise 9
+// Write a JavaScript program to calculate days left until next Christmas. 
+
+// ====================
+// Exercise 10
+// Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
 
 
-// 3) Get a list of the people's full name (firstName and lastName).
-people.forEach(() => {
-  return people[0].firstName
-})
-
-// 4) Get a list of people in the array ordered from youngest to oldest.
-people.sort
-
-// 5) How many people are there in each department?
-
-// Variables
-const orders = [
-  {
-    orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
-      { productId: '123', price: 55 },
-      { productId: '234', price: 30 },
-    ]
-  },
-  {
-    orderId: '234', customerId: '234', deliveryDate: '01-02-2020', delivered: false, items: [
-      { productId: '234', price: 30 },
-    ]
-  },
-  {
-    orderId: '345', customerId: '234', deliveryDate: '05-01-2020', delivered: true, items: [
-      { productId: '567', price: 30 },
-      { productId: '678', price: 80 },
-    ]
-  },
-  {
-    orderId: '456', customerId: '345', deliveryDate: '12-01-2020', delivered: true, items: [
-      { productId: '789', price: 12 },
-      { productId: '890', price: 90 },
-    ]
-  },
-  {
-    orderId: '578', customerId: '456', deliveryDate: '12-01-2020', delivered: true, items: [
-      { productId: '901', price: 43 },
-      { productId: '123', price: 55 },
-    ]
-  },
-];
-
-// Exercises
-
-// 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
+// Select global variables
+const numFirst = document.querySelector('#num')
+const numSecond = document.querySelector('#numItem')
+const multiply = document.querySelector('.multiply')
+const divide = document.querySelector('.divide')
+const result = document.querySelector('.result')
 
 
-// 2) Create a new property on each order with the total price of items ordered.
+// Functions for multiply and divide
+function multiplyItems() {
+  multiply.addEventListener('click', function (e) {
+    e.preventDefault()
+    const multiplyResult = numFirst.value * numSecond.value;
+    console.log(multiplyResult)
 
+    const newList = document.createElement('li')
+    // result.innerText = `The result is ${multiplyResult}`
+    newList.innerText = `The result is ${multiplyResult}`
+    result.appendChild(newList)
+    numFirst.value = '';
+    numSecond.value = '';
+  })
+}
+multiplyItems()
 
-// 3) Have all the orders been delivered?
+// Function divide items
+function divideItems() {
+  divide.addEventListener('click', function (e) {
+    e.preventDefault()
+    const divideResult = numFirst.value / numSecond.value;
+    console.log(divideResult)
 
+    const newList = document.createElement('li')
+    // result.innerText = `The result is ${divideResult}`
+    newList.innerText = `The result is ${divideResult}`
+    result.appendChild(newList);
+    numFirst.value = '';
+    numSecond.value = '';
+  })
+}
 
-// 4) Has the customer with ID '123' made any orders?
+divideItems()
 
+// Exercise 11
+// Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  Go to the editor
 
-// 5) Have any products with an id of 123 been sold?
+function convertToDegrees(cel, fahr) {
+  const fahrenResult = cel * 1.8 + 32;
+  console.log(fahrenResult, `F`)
+  const celcuisResult = (fahr - 32) * 0.5556;
+  console.log(Math.floor(celcuisResult), `C`)
+}
+
+convertToDegrees(20, 68)
+
+// Exercise 12
+// Write a javascript programme to get the website url
+
+console.log(document.URL)
+
+// Exercise 13
+// Write a JavaScript exercise to create a variable using a user-defined name
+let userName = '';
+function getUserName() {
+  const name = prompt('Enter your name')
+  userName = name;
+  console.log(userName)
+}
+
+// getUserName()
+
+// Exercise 14
+// Write a JavaScript exercise to get the extension of a filename.
+function getExtension(str) {
+  return str.slice(str.lastIndexOf('.'))
+}
+
+console.log(getExtension('book.pdf'))
+
+// Exercise 15
+// Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference. 
+
+function returnDiff(num) {
+  const subtract = num - 13;
+  console.log(subtract)
+  if (num > 13) {
+    return subtract * 2
+  }
+
+}
+
+console.log(returnDiff(20))
