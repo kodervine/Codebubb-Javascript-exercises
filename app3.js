@@ -202,3 +202,66 @@ function returnDiff(num) {
 }
 
 console.log(returnDiff(20))
+
+// Exercise 16
+// Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum. 
+
+function computeTwoInt(a, b) {
+  if (a === b) {
+    return (a + b) * 3
+  } else {
+    return a + b
+  }
+}
+
+console.log(computeTwoInt(4, 4))
+
+// Exercise 17 
+// Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19. 
+
+function computeAbsDiff(num) {
+  if (num > 19) {
+    return ((num - 19) * 3)
+  } else {
+    return num - 19
+  }
+}
+
+console.log(computeAbsDiff(30))
+
+// Exercise 18
+// Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+
+function isNumtrue(x, y) {
+  if (((x === 50) | (y === 50) | (x + y === 50))) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isNumtrue(25, 2))
+
+// Exercise 19
+// Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
+
+function isGivenInt(num) {
+  if ((num > (20 / 100)) && (num < 400)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isGivenInt(300))
+
+// Exercise 20
+// Write a JavaScript program to check from two given integers, whether one is positive and another one is negative.
+
+function isPosiOrNega(x, y) {
+  if ((x < 0) | (y < 0)) {
+    return true
+  }
+}
+
+console.log(isPosiOrNega(2, -2))
