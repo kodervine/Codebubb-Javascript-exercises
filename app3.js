@@ -265,3 +265,61 @@ function isPosiOrNega(x, y) {
 }
 
 console.log(isPosiOrNega(2, -2))
+
+// Execrise 21
+// Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string. 
+function newPyStr(str) {
+  if ((str[0] !== 'P') && (str[1] !== 'y')) {
+    return "Py" + str
+  } else {
+    return str
+  }
+}
+
+console.log(newPyStr('pdge'))
+
+// Exercise 22
+// Write a JavaScript program to remove a character at the specified position of a given string and return the new string.
+
+function removeCharStr(str, num, endNum, ret) {
+  return str.slice(num, endNum) + str.slice(ret)
+}
+
+console.log(removeCharStr('Marvelours', 0, 3, 4))
+
+// Exercise 23
+// Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1.
+function newFromGivenStr(str) {
+  if (str.length < 2) {
+    return 'The str must be greater than 1'
+  }
+  const newStrCreate = str.charAt(str.length - 1) + str[0]
+  return newStrCreate;
+}
+
+console.log(newFromGivenStr('Ken'))
+
+// Exercise 24
+// Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.  
+
+function appendToStr(str) {
+  const newAppendStr = str[0] + str + str[0]
+  return newAppendStr;
+}
+
+console.log(appendToStr('Dhuur'))
+
+// Exercise 25
+// Write a JavaScript program to check whether a given positive number is a multiple of 3 or a multiple of 7. 
+function isMultiple(num) {
+  if (num < 0) {
+    return 'Must be a postive interger'
+  }
+  if ((num % 3 === 0) || (num % 7 === 0)) {
+    return 'Num is divisible by 3 or 7'
+  } else {
+    return 'Num is not divisible by 3 or 7'
+  }
+}
+
+console.log(isMultiple(21))
