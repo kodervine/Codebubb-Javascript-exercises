@@ -323,3 +323,69 @@ function isMultiple(num) {
 }
 
 console.log(isMultiple(21))
+
+// Exercise 26
+// Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more. 
+
+function createStr(str) {
+  if (str.length < 3) {
+    alert('Str must be 3 letters or more')
+  } else {
+    const append = str.substring(str.length - 3)
+    // const append = str.substr(0, 3)
+    return append + str + append
+  }
+}
+console.log(createStr('Charity'))
+
+// Exercise 27
+// Write a JavaScript program to check whether a string starts with 'Java' and false otherwise.
+function startsJava(str) {
+  const isJava = str.slice(0, 4)
+  if (isJava === 'Java') {
+    return 'You rock, you start with Java'
+  } else {
+    return false
+  }
+}
+
+console.log(startsJava('Javascript'))
+
+// Exercise 28
+// Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them are in the said range.
+
+function isInRange(int1, int2) {
+  if ((int1 >= 50) && (int2 <= 99)) {
+    return true
+  } else {
+    return 'No, you are not in range'
+  }
+}
+
+console.log(isInRange(49, 70))
+
+// Exercise 29
+// Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the said range.  
+function isThreeInRange(a, b, c) {
+  if ((a >= 50 && a <= 99) || (b >= 50 && b <= 99) || (c >= 50 && c <= 99)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isThreeInRange(90, 40, 40))
+
+// Exercise 30
+// Write a JavaScript program to check whether a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one
+
+function isScriptPresent(str) {
+  const scriptStr = str.slice(4, 10)
+  if (scriptStr === 'script') {
+    return str.slice(0, 4) + str.slice(10)
+  } else {
+    return str
+  }
+}
+
+console.log(isScriptPresent('MonescriptFavour'))

@@ -44,3 +44,84 @@ function joinArr(arr) {
 }
 
 console.log(joinArr(["Red", "Green", "White", "Black"]))
+
+// Exercise 6
+// Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+// Wrong answer but did try
+function insertDash(nums, item) {
+  for (let num of nums) {
+    if (num % 2 === 0 || (num + 1) % 2 === 0) {
+      return num + item
+    }
+  }
+}
+
+console.log(insertDash([1, 2, 3, 4, 5, 6, 7, 8], '-'))
+
+// Exercise 7
+// Write a JavaScript program to sort the items of an array.
+const sortArr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+sortArr.sort()
+
+console.log(sortArr.sort())
+
+// Exercise 8
+// Write a JavaScript program to find the most frequent item of an array
+
+
+
+function freqArray() {
+  const arrItems = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+  for (let i = 0; i < arrItems.length; i++) {
+    if (i === i) {
+      return i;
+    } else {
+      return 'I don\'t know what happened'
+    }
+  }
+}
+
+console.log(freqArray())
+
+// Exercise 9
+// Write a JavaScript program which accept a string as input and swap the case of each character. 
+
+function swapCase(strText) {
+  let text = '';
+  for (let i = 0; i < strText.length; i++) {
+    if (strText[i] === strText[i].toLowerCase()) {
+      text += strText[i].toUpperCase()
+    } else {
+      text += strText[i].toLowerCase();
+    }
+  }
+  return text
+}
+
+console.log(swapCase('The Quick Brown Fox'))
+console.log(swapCase('Chinenye'))
+
+
+// Exercise 10
+// Write a JavaScript program which prints the elements of the following array.
+function printNestedArr(arr) {
+  return arr.join('  ')
+}
+
+console.log(printNestedArr([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]))
+
+// Exercise 11
+// Write a JavaScript program to find the sum of squares of a numeric vector
+
+// Exercise 12
+// Write a JavaScript program to compute the sum and product of an array of integers.
+const arraynums = [1, 2, 3, 4]
+function computeArrSumProduct() {
+  let newArr = 0;
+  let secArr;
+  for (let i = 0; i < arraynums.length; i++) {
+    return newArr += arraynums[i];
+  }
+}
+
+console.log(computeArrSumProduct())
