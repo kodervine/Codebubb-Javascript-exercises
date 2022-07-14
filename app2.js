@@ -21,11 +21,11 @@ console.log(sortStr('drag'))
 
 //His solution
 
-const alphaOrder = (str) => 
-  str.split('').sort((a,b) => a > b ? 1 : -1).join('')
+const alphaOrder = (str) =>
+  str.split('').sort((a, b) => a > b ? 1 : -1).join('')
 
 
-  console.log(alphaOrder('dabby'))
+console.log(alphaOrder('dabby'))
 
 /*
 Part 5
@@ -105,9 +105,9 @@ Pseudo code
 =====================
 */
 //His solution
-const repeatChar = (str)  =>
+const repeatChar = (str) =>
   str.split('')
-    .filter((item, index, arr) => 
+    .filter((item, index, arr) =>
       arr.filter(arrItem => arrItem === item).length === 1)
 
 
@@ -141,7 +141,6 @@ Pseudo code
 == Use the for-in
 == Initialize a variable
 == Add each iteration to the initialized variable
-
 */
 // My solution
 let count = 0;
@@ -211,7 +210,7 @@ const newOrders = orders.reduce((total, acc) => {
   orders.pop = total;
 })
 
-console.log(newOrders(orders.price, 0))
+// console.log(newOrders(orders.price, 0))
 
 
 // 3) Have all the orders been delivered?
@@ -226,24 +225,31 @@ orders.some((num) => num.items.productId === '123')
 
 // Write a JavaScript program to compare two objects to determine if the first one contains equivalent property values to the second one.
 
-const bill = {
-  name: Chinenye,
-  age: 21
+// const bill = {
+//   name: Chinenye,
+//   age: 21
+// }
+
+// const nenye = {
+//   name: laskelly,
+//   age: 30
+// }
+
+// function compareProperty(item, meti) {
+//   if (item.length === meti.length) {
+//     return `${item} and ${meti}`
+//   } else {
+//     return 'I don\'t know'
+//   }
+// }
+
+// console.log(compareProperty(bill, nenye))
+
+// Write program that returns the highest number
+function secondArr(arr) {
+  const sortArr = arr.sort()
+  console.log(sortArr)
+  return `${sortArr[1]}, ${sortArr.pop()}, ${sortArr.pop()}`
 }
 
-const nenye = {
-  name: laskelly,
-  age: 30
-}
-
-
-
-function compareProperty(item, meti) {
-  if (item.length === meti.length) {
-    return `${item} and ${meti}`
-  } else {
-    return 'I don\'t know'
-  }
-}
-
-console.log(compareProperty(bill, nenye))
+console.log(secondArr([2, 3, 4, 5, 6, 9]))

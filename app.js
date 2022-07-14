@@ -1,5 +1,4 @@
 /* Part 1 - Exercise 1
-
 A program to check two numbers
 Retur true if one of the numbers is 100
 Or if the sum of the two numbers is 100 */
@@ -68,11 +67,9 @@ console.log(formatDate())
 
 
 /* Exercise 5 - Part 
-
 =================================
 
   Create a new string adding "New" in front of a given strings with "New!" already then return the original string
-
 ==================================
 */
 
@@ -230,7 +227,7 @@ My Pseudo code -
 
 function strContains(str, occur) {
   if (str.includes(occur)) {
-      return 'It worked'
+    return 'It worked'
   } else {
     return 'Nah, it didn\'t work';
   }
@@ -244,7 +241,7 @@ const countChars = (str, char) => {
   str.split('').filter(ch => ch === char).length;
 }
 
-const contains2To4 = (str, char) => 
+const contains2To4 = (str, char) =>
   countChars(str, char) >= 2 && countChars(str, char) <= 4;
 
 console.log(contains2To4('ooh', 'o'))
@@ -262,24 +259,24 @@ My Pseudo code -
 */
 
 function evenArrays(arr) {
-  arr.filter(function(num) {
+  arr.filter(function (num) {
     return num % 2 === 0
   })
 }
 
-console.log(evenArrays([1,2,3,4,5,6,7,]))
+console.log(evenArrays([1, 2, 3, 4, 5, 6, 7,]))
 
 const evenArray = (arr) =>
   arr.filter(num => num % 2 === 0).length
 
-console.log(evenArray([1,2,3,4,5,6,7,]))
+console.log(evenArray([1, 2, 3, 4, 5, 6, 7,]))
 
 //Solution
 
-const countEvenNums = (arr) => 
+const countEvenNums = (arr) =>
   arr.filter(num => num % 2 === 0).length;
 
-console.log(countEvenNums([1,2,3,4,5,6]))
+console.log(countEvenNums([1, 2, 3, 4, 5, 6]))
 
 /* 
 ====================
@@ -294,24 +291,24 @@ My Pseudo code -
 ** Check if the number of array is same as a given number
 */
 
-function findEvenNum(arr, count){
+function findEvenNum(arr, count) {
   const filteredNums = arr.filter(nums => nums % 2 === 0)
-  if (filteredNums.length === count){
+  if (filteredNums.length === count) {
     return filteredNums.length;
   } else {
     return `Count is ${count} number`
   }
 }
 
-console.log(findEvenNum([1,2,3,4,5,6], 3))
+console.log(findEvenNum([1, 2, 3, 4, 5, 6], 3))
 
 //His response
-const countEvenNumbers = (arr) => 
+const countEvenNumbers = (arr) =>
   arr.filter(num => num % 2 === 0).length;
 
 const randomArr = (num) => {
   let arrayNum = []
-  for (let i = 0; i < num; i++){
+  for (let i = 0; i < num; i++) {
     arrayNum.push(i);
   }
   return arrayNum;
@@ -336,17 +333,17 @@ const isArraySorted = (arr) => {
   return arr.sort()
 }
 
-console.log(isArraySorted([1,2,5,6,7,3,1,3]))
+console.log(isArraySorted([1, 2, 5, 6, 7, 3, 1, 3]))
 
 //His response
 const isAscending = (arr) => {
-  for(let i = 0; i < arr.length; i += 1) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (arr[i + 1] < arr[i]) return false
-  } 
+  }
   return true;
 }
 
-console.log(isAscending([1,2,4,5,6,3,5,6,2,]))
+console.log(isAscending([1, 2, 4, 5, 6, 3, 5, 6, 2,]))
 
 /* 
 ====================
@@ -362,18 +359,18 @@ My Pseudo code -
 */
 
 const highestEvenNum = (arr) => {
-  const filteredArr = arr.filter((num) => num % 2 === 0) 
-  for (let i = 0; i < filteredArr.length; i++){
-    return  Math.max(...filteredArr)
-    }
+  const filteredArr = arr.filter((num) => num % 2 === 0)
+  for (let i = 0; i < filteredArr.length; i++) {
+    return Math.max(...filteredArr)
   }
+}
 
-console.log(highestEvenNum([2,4,5,1,5,7,4,23,99,10]))
+console.log(highestEvenNum([2, 4, 5, 1, 5, 7, 4, 23, 99, 10]))
 
 //His solutions
 const highestEvenInt = (arr) => Math.max(...arr.filter((num) => num % 2 === 0))
 
-console.log(highestEvenInt([2,4,5,1,5,7,4,23,99,10]))
+console.log(highestEvenInt([2, 4, 5, 1, 5, 7, 4, 23, 99, 10]))
 
 /* 
 ====================
@@ -433,23 +430,23 @@ const name2 = {
 }
 
 const objProperties = (obj1, obj2) => {
-  if (obj1.name === obj2.name){
-     return true
+  if (obj1.name === obj2.name) {
+    return true
   } else {
     return false
   }
-} 
+}
 
 console.log(objProperties(name1, name2))
 
 //His solution
-const objA = {a: 1, b: 2, c: 1}
-const objB = {a: 1, b: 1, c: 1}
-const objC = {a: 1, b: 1, d: 1}
+const objA = { a: 1, b: 2, c: 1 }
+const objB = { a: 1, b: 1, c: 1 }
+const objC = { a: 1, b: 1, d: 1 }
 
-const objectsEqual = (a,b) =>
+const objectsEqual = (a, b) =>
   Object.keys(a).every(key => b[key]);
-  
+
 
 console.log(objectsEqual(objA, objB))
 
@@ -474,7 +471,7 @@ My Pseudo code -
 */
 
 
-const toArray = (str) => 
+const toArray = (str) =>
   str.split('\n')
 
 const text = `abc,def,ghi 
@@ -487,14 +484,14 @@ console.log(toArray(text))
 const parseCSV = (csvString) =>
   csvString.split('\n').map(row => row.split(','))
 
-  const strCSV = `abc,def,ghi
+const strCSV = `abc,def,ghi
 jkl,mno,pqr
 stu,vwx,yza`
 
 console.log(parseCSV(strCSV))
 
 //My second trial
-const outerArr = (str) =>  str.split('\n').map((arr) => arr.split(','))
+const outerArr = (str) => str.split('\n').map((arr) => arr.split(','))
 
 const arrText = `abc, def, ghi
 jkl,mno,pqr
@@ -516,21 +513,21 @@ My Pseudo code -
 */
 
 //Solution found on comment section
-const randColor = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D', 'E', 'F']
+const randColor = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
 
 const randomHex = () => {
   let result = '#'
-  for (let i = 0; i <= 5; i++){
-   let number = Math.floor(Math.random() * randColor.length);
-   result += randColor[number]
-}
-return result
+  for (let i = 0; i <= 5; i++) {
+    let number = Math.floor(Math.random() * randColor.length);
+    result += randColor[number]
+  }
+  return result
 }
 
 console.log(randomHex())
 
 //His solution
-const generateHexNum = () => 
+const generateHexNum = () =>
   Math.floor(Math.random() * 16).toString(16)
 
 console.log(generateHexNum())
@@ -558,7 +555,7 @@ My Pseudo code -
 const innerArr = (func) => {
   for (let fun of func) {
     console.log(fun)
-    if (fun + 1 < fun){
+    if (fun + 1 < fun) {
       return `Yes, greater than initial interger`
     } else {
       return `Nope, didn't work`
@@ -566,12 +563,12 @@ const innerArr = (func) => {
   }
 }
 
-console.log(innerArr([0,2,3,4,5,6]))
+console.log(innerArr([0, 2, 3, 4, 5, 6]))
 
 const predicateArr = (func) => {
   func.some()
 }
 
-console.log(innerArr([2,4,5,6,7,8]))
+console.log(innerArr([2, 4, 5, 6, 7, 8]))
 
 //His response

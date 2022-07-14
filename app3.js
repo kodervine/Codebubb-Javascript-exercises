@@ -65,7 +65,7 @@ console.log(rotateString('w3resource'))
 // Exercise 6
 // Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar
 
-function getLeapYear(num) {
+function getYear(num) {
 
   if (num === 1600 || num === 2000) {
     console.log(`${num} is a leap year`)

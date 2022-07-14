@@ -125,3 +125,54 @@ function computeArrSumProduct() {
 }
 
 console.log(computeArrSumProduct())
+
+// Exercise 14
+// Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+const arry = [1, 2, 1, 3, 4, 3, 5];
+
+const toFindDuplicates = arry => arry.filter((item, index) => arry.indexOf(item) !== index)
+
+const duplicateElements = toFindDuplicates(arry);
+console.log(duplicateElements);
+
+//Failed
+// function findDuplicate(arr) {
+//   arr.filter((item, index) => {
+//     return arr.indexOf(item) !== index
+//   })
+// }
+// console.log(findDuplicate(arry))
+
+// Exercise 16
+// Write a JavaScript program to find the leap years in a given range of years.
+
+function isLeapYear(arr) {
+  return arr.filter((num) => {
+    return ((num % 4 === 0)) || (!(num % 4 === 0) && ((num % 100 === 0) && (num % 100 === 0)))
+  })
+}
+
+console.log(isLeapYear([1203, 1900, 1609, 1800]))
+
+// Exercise 16
+// Write a JavaScript program to shuffle an array
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    console.log(randomIndex)
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+console.log(shuffle([2, 3, 45, 6, 1]))
