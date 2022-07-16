@@ -176,3 +176,28 @@ function shuffle(array) {
 }
 
 console.log(shuffle([2, 3, 45, 6, 1]))
+
+// Exercise 21
+// Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened a single level. Go to the editor
+function flattenArr(arr) {
+  const flatArr = arr.join(" ")
+  return flatArr.split(' ')
+}
+
+console.log(flattenArr([1, 2, [3], 4, [[4]]]))
+console.log(flattenArr([1, [2], [3, [[4]]], [5, 6]], true))
+
+// Exercise 22
+// Write a JavaScript program to compute the union of two arrays. 
+function computeArray(arr1, arr2) {
+  let checkSimi = arr1;
+  return arr1.filter(() => {
+    if (arr1 === arr2) {
+      return arr1
+    }
+  })
+  // const newCompute = [...arr1, ...arr2]
+  // return newCompute
+}
+
+console.log(computeArray([1, 2, 3], [100, 2, 1, 10]))
