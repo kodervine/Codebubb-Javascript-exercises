@@ -201,3 +201,67 @@ function computeArray(arr1, arr2) {
 }
 
 console.log(computeArray([1, 2, 3], [100, 2, 1, 10]))
+
+// Exercise 23
+// Write a JavaScript function to find the difference of two arrays.
+
+function diffArr(arr1, arr2) {
+  let newArr = [];
+  for (let arry of arr1) {
+    console.log(arry)
+    newArr.push(arry);
+    console.log(newArr)
+    return arr2.filter(() => {
+      if (newArr[arry] != arr2) {
+        return newArr;
+      }
+    })
+  }
+}
+
+console.log(diffArr([1, 2, 3], [100, 2, 1, 10]))
+
+// Exercise 24 
+// Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array. 
+
+function removeArr(arr) {
+  // return arr.filter((arry) => {
+  //   if (arr.typeOf(arry) != string || number) {
+  //     return 'I work'
+  //   }
+  // })
+  return arr.map((arr) => {
+    if (!typeof arr === 'string' || !typeof arr === "number") {
+      return arr;
+    } else {
+      return 'Don\'t know'
+    }
+  })
+}
+
+console.log(removeArr([1, 2, 'dhur', null]))
+
+// Exercise 25
+// Write a JavaScript function to sort the following array of objects by title value.
+function sortTitle (arr){
+  // const sortObj =  arr.map((str) => {
+  //   return str.sort((a,b)=> {
+  //     return b.title - a.title
+  //   })
+  // })
+  // return sortObj;
+}
+
+console.log(sortTitle([{
+  author: "Suzanne Collins",
+  libraryID: 3245,
+  title:"Mockingjay:The Final Book of The Hunger Games"
+},{
+  author: "Bill Gates",
+  libraryID: 1254,
+  title: "The Road Ahead"
+},{
+  author: "Steve Jobs",
+  libraryID: 4264,
+  title: "Walter Isaacson"
+}]))
